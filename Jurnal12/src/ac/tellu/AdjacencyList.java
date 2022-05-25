@@ -7,13 +7,13 @@ import java.util.LinkedList;
 public class AdjacencyList {
     HashMap<String, LinkedList<String>> graph = new HashMap<String, LinkedList<String>>();
 
-    AdjacencyList(String[] vertices) {
+    AdjacencyList(String... vertices) {
         for (String vertex : vertices) {
             this.graph.put(vertex, new LinkedList<String>());
         }
     }
 
-    public void addEdge(String src, String[] dst) {
+    public void addEdge(String src, String... dst) {
         this.graph.put(src, new LinkedList<String>(Arrays.asList(dst)));
     }
 
